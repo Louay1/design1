@@ -1,0 +1,319 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+$orange: #FF5216;
+$yellow: #F8B700;
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-45deg, $orange, $yellow);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+.flex-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 14px;
+    .right ul{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        li{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            padding: 0 4px;
+            text-decoration: underline;
+            &:hover{
+                cursor: pointer;
+            }
+            img{
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+    a{
+        margin: 0 7px;
+        color: white;
+    }
+
+    .left{
+        display: flex;
+        flex-direction: row;
+        img{
+            height: 20px;
+            width: 20px;
+        }
+    }
+}
+
+.body-wrapper{
+    margin-top: 20px;
+    width: 100%;
+    height: 83vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+    a{
+        color: white;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .hero-sign{
+            .welcome{
+                font-size: 36px;
+                line-height: 4.5rem;
+            }
+            .invit{
+                margin:15px 0;
+            }
+        }
+    }
+    .right{
+        background-image: url('../conv.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .form{
+            width: 300px;
+            height: 350px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba($yellow, $alpha: 0.7);
+            border-radius: 40px;
+            h2{
+                font-size:35px;
+            }
+            .inout{
+                margin: 10px 0;
+                input{
+                    width: 260px;
+                    padding: 10px;
+                    background: rgba($yellow, $alpha: 0);
+                    font-size: 16px;
+                    border: none;
+                    border-bottom: dashed 2px white;
+                    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    &:focus{
+                        border-bottom: dashed 2px $orange;
+                        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    }
+                }
+            }
+            .keepme{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 10px 0;
+                font-size: 14px;
+                .check{
+                    display: flex;
+                    flex-direction: row;
+                    label{
+                        margin: 0 5px;
+                    }
+                }
+            }
+            input[type="submit"]{
+                border: none;
+                margin: 10px 0;
+                padding: 15px;
+                font-size: 18px;
+                width: 150px;
+                border-radius: 50px;
+                color: black;
+                transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                &:hover{
+                    background: #FF5216;
+                    cursor: pointer;
+                    color: white;
+                    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                }
+            }
+        }
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        li{
+            filter: grayscale(1);
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            margin: 5px 10px;
+            &:hover{
+                filter: grayscale(0);
+                transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+        }
+    }
+
+}
+.foot-wrapper, .center{
+    text-align: center;
+}
+
+.nav-items{
+    float: right;
+    ul{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0 10px;
+        li{
+            padding: 15px;
+            font-size: 18px;
+            color: lightgrey;
+            font-weight: bold;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:hover{
+                cursor: pointer;
+                color: white;
+                transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+        }
+    }
+}
+
+.signup{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+    height: 90vh;
+    color: black;
+    .form{
+        display: flex;
+        flex-direction: column;
+        form{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            .inout{
+                margin: 25px;
+                input{
+                    width: 240px;
+                    padding: 10px;
+                    background: rgba($yellow, $alpha: 0);
+                    font-size: 16px;
+                    border: none;
+                    border-bottom: dashed 2px grey;
+                    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    &:focus{
+                        border-bottom: dashed 2px $orange;
+                        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                    }
+                }
+            }
+        }
+        button{
+            font-size: 18px;
+            height: 50px;
+            width: 90px;
+            margin: 30px;
+            border-radius: 50px;
+            background: white;
+            border: rgba($orange, 1) 2px solid;
+            float: left;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:hover{
+                background: $orange;
+                transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+                a{
+                    color: white;
+                }
+            }
+
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    .half{
+        height: 100vh;
+        clip-path: polygon(1% 0, 100% 0, 100% 100%, 14% 100%, 5% 82%, 15% 66%, 6% 53%, 16% 37%, 8% 24%, 15% 15%);
+        background: linear-gradient(rgba($yellow, 0.7), rgba($orange, 0.7)), url('../camp.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        button{
+            font-size: 18px;
+            height: 50px;
+            width: 90px;
+            margin: 30px;
+            border-radius: 50px;
+            background: white;
+            border: none;
+            float: right;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:hover{
+                background: $orange;
+                color: white;
+                transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+        }
+    }
+    input[type="submit"]{
+        border: none;
+        margin: 20px;
+        padding: 15px;
+        font-size: 18px;
+        width: 150px;
+        border-radius: 50px;
+        color: white;
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        background: #FF5216;
+        &:hover{
+            background: $yellow;
+            cursor: pointer;
+            color: black;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    }
+}
+
+.nav{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .back-btn{
+        position: relative;
+        p{
+            position: absolute;
+            left: 12px;
+            top: -20px;
+        }
+        text-align: center;
+        font-size: 50px;
+        height:40px;
+        width: 40px;
+        border: black 2px solid;
+        border-radius: 50%;
+    }
+}
+
+
+#white{
+    background: white;
+}
